@@ -1,0 +1,232 @@
+<div class="container-fluid body_01">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="form-container">
+        <h2 class="text-center mb-4">Application Form</h2>
+        <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" formControlName="fullName" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('fullName')?.touched && applicationForm.get('fullName')?.invalid}" id="fullName" placeholder="Enter your full name">
+              <div *ngIf="applicationForm.get('fullName')?.touched && applicationForm.get('fullName')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="dateOfBirth" class="form-label">Date of Birth</label>
+              <input type="date" formControlName="dateOfBirth" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('dateOfBirth')?.touched && applicationForm.get('dateOfBirth')?.invalid}" id="dateOfBirth" placeholder="Enter your date of birth">
+              <div *ngIf="applicationForm.get('dateOfBirth')?.touched && applicationForm.get('dateOfBirth')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('email')?.touched && applicationForm.get('email')?.invalid}" id="email" placeholder="Enter your email">
+              <div *ngIf="applicationForm.get('email')?.touched && applicationForm.get('email')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="text" formControlName="phone" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('phone')?.touched && applicationForm.get('phone')?.invalid}" id="phone" placeholder="Enter your phone number">
+              <div *ngIf="applicationForm.get('phone')?.touched && applicationForm.get('phone')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="panCard" class="form-label">PAN Card</label>
+              <input type="text" formControlName="panCard" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('panCard')?.touched && applicationForm.get('panCard')?.invalid}" id="panCard" placeholder="Enter your PAN card number">
+              <div *ngIf="applicationForm.get('panCard')?.touched && applicationForm.get('panCard')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" formControlName="address" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('address')?.touched && applicationForm.get('address')?.invalid}" id="address" placeholder="Enter your address">
+              <div *ngIf="applicationForm.get('address')?.touched && applicationForm.get('address')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="city" class="form-label">City</label>
+              <input type="text" formControlName="city" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('city')?.touched && applicationForm.get('city')?.invalid}" id="city" placeholder="Enter your city">
+              <div *ngIf="applicationForm.get('city')?.touched && applicationForm.get('city')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="state" class="form-label">State</label>
+              <input type="text" formControlName="state" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('state')?.touched && applicationForm.get('state')?.invalid}" id="state" placeholder="Enter your state">
+              <div *ngIf="applicationForm.get('state')?.touched && applicationForm.get('state')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="zipCode" class="form-label">Zip Code</label>
+              <input type="text" formControlName="zipCode" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('zipCode')?.touched && applicationForm.get('zipCode')?.invalid}" id="zipCode" placeholder="Enter your zip code">
+              <div *ngIf="applicationForm.get('zipCode')?.touched && applicationForm.get('zipCode')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="annualIncome" class="form-label">Annual Income</label>
+              <input type="text" formControlName="annualIncome" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('annualIncome')?.touched && applicationForm.get('annualIncome')?.invalid}" id="annualIncome" placeholder="Enter your annual income">
+              <div *ngIf="applicationForm.get('annualIncome')?.touched && applicationForm.get('annualIncome')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="employeeStatus" class="form-label">Employee Status</label>
+              <input type="text" formControlName="employeeStatus" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('employeeStatus')?.touched && applicationForm.get('employeeStatus')?.invalid}" id="employeeStatus" placeholder="Enter your employee status">
+              <div *ngIf="applicationForm.get('employeeStatus')?.touched && applicationForm.get('employeeStatus')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="creditScore" class="form-label">Credit Score</label>
+              <input type="text" formControlName="creditScore" class="form-control" [ngClass]="{'is-invalid': applicationForm.get('creditScore')?.touched && applicationForm.get('creditScore')?.invalid}" id="creditScore" placeholder="Enter your credit score">
+              <div *ngIf="applicationForm.get('creditScore')?.touched && applicationForm.get('creditScore')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-12 mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea formControlName="message" class="form-control" formControlName="message" [ngClass]="{'is-invalid': applicationForm.get('message')?.touched && applicationForm.get('message')?.invalid}" id="message" placeholder="Enter additional information"></textarea>
+              <div *ngIf="applicationForm.get('message')?.touched && applicationForm.get('message')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="col-md-5">
+      <div class="form-container">
+        <h4 class="text-center mb-4">Add Loan Details</h4>
+        <form>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="bankName" class="form-label">Bank Name</label>
+                <input type="text"  class="form-control" formControlName="bankName" [(ngModel)]="loan.bankName"   [ngClass]="{'is-invalid': applicationForm.get('bankName')?.touched && applicationForm.get('bankName')?.invalid}"   id="bankName" name="bankName[]" placeholder="Enter Bank Name">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="loanAmount" class="form-label">Loan Amount</label>
+              <input type="number"  class="form-control" formControlName="loanAmount" [(ngModel)]="loan.loanAmount"   [ngClass]="{'is-invalid': applicationForm.get('loanAmount')?.touched && applicationForm.get('loanAmount')?.invalid}"    id="loanAmount" name="loanamount[]" placeholder="Enter loan amount">
+          </div>
+            <div class="col-md-4 mb-3">
+                <label for="emi" class="form-label">EMI</label>
+                <input type="number" class="form-control"  formControlName="emi" [(ngModel)]="loan.emi"   [ngClass]="{'is-invalid': applicationForm.get('emi')?.touched && applicationForm.get('emi')?.invalid}"   id="emi"  name="emi[]" placeholder="Enter EMI amount">
+            </div>
+            <button type="button" class="btn btn-primary w-100" (click)="addLoan()">Add Another Loan</button>
+          </div>
+        </form>
+    </div>
+    
+    <div class="table-container">
+        <h4 class="text-center mb-3">Loan Summary</h4>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Sr No</th>
+                    <th>Bank Name</th>
+                    <th>Loan Amount</th>
+                    <th>EMI</th>
+                </tr>
+            </thead>
+            @if (application.Loans.length === 0) {
+              <tbody>
+                  <!-- Table rows will go here -->
+                  <tr>
+                      <td colspan="4" class="text-center">No loan data added yet.</td>
+                  </tr>
+              </tbody>
+            }
+            
+            @else {
+            <tbody>
+                <!-- Table rows will go here -->
+                @for (item of application.Loans; track $index) {
+                <tr>
+                    <td>{{$index+1}}</td>
+                    <td>{{item.bankName}}</td>
+                    <td>{{item.loanAmount}}</td>
+                    <td>{{item.emi}}</td>
+                </tr>
+              }
+            </tbody>
+          }
+        </table>
+    </div>
+    </div>
+
+    <!-- <div class="col-md-5">
+      <div class="form-container">
+        <h2 class="text-center mb-4">Employee Loan</h2>
+        <form [formGroup]="EmployeeLoan" (ngSubmit)="addLoan()">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="bankName" class="form-label">Bank Name</label>
+              <input type="text" formControlName="bankName" class="form-control" [ngClass]="{'is-invalid': EmployeeLoan.get('bankName')?.touched && EmployeeLoan.get('bankName')?.invalid}" id="bankName" placeholder="Enter bank name">
+              <div *ngIf="EmployeeLoan.get('bankName')?.touched && EmployeeLoan.get('bankName')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="loanType" class="form-label">Loan Type</label>
+              <input type="text" formControlName="loanType" class="form-control" [ngClass]="{'is-invalid': EmployeeLoan.get('loanType')?.touched && EmployeeLoan.get('loanType')?.invalid}" id="loanType" placeholder="Enter loan type">
+              <div *ngIf="EmployeeLoan.get('loanType')?.touched && EmployeeLoan.get('loanType')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="loanAmount" class="form-label">Loan Amount</label>
+              <input type="text" formControlName="loanAmount" class="form-control" [ngClass]="{'is-invalid': EmployeeLoan.get('loanAmount')?.touched && EmployeeLoan.get('loanAmount')?.invalid}" id="loanAmount" placeholder="Enter loan amount">
+              <div *ngIf="EmployeeLoan.get('loanAmount')?.touched && EmployeeLoan.get('loanAmount')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="rateOfInterest" class="form-label">Rate of Interest</label>
+              <input type="text" formControlName="rateOfInterest" class="form-control" [ngClass]="{'is-invalid': EmployeeLoan.get('rateOfInterest')?.touched && EmployeeLoan.get('rateOfInterest')?.invalid}" id="rateOfInterest" placeholder="Enter rate of interest">
+              <div *ngIf="EmployeeLoan.get('rateOfInterest')?.touched && EmployeeLoan.get('rateOfInterest')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="tenure" class="form-label">Tenure</label>
+              <input type="text" formControlName="tenure" class="form-control" [ngClass]="{'is-invalid': EmployeeLoan.get('tenure')?.touched && EmployeeLoan.get('tenure')?.invalid}" id="tenure" placeholder="Enter loan tenure">
+              <div *ngIf="EmployeeLoan.get('tenure')?.touched && EmployeeLoan.get('tenure')?.invalid" class="text-danger">
+                You need to fill above field
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-primary w-100">Add Loan</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div> -->
+  </div>
+</div>

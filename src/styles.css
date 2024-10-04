@@ -1,0 +1,91 @@
+/* Container Styling */
+.container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Title */
+  h2, h4 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Input Fields */
+  input[type="text"], input[type="email"], input[type="date"], input[type="tel"], input[type="number"], select, textarea {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Input Focus State */
+  input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    background-color: #e9f5ff;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+  }
+  
+  /* Button Hover Effect */
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Button Active Effect */
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+  }
+  
+  /* Animation on Input */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  input, select, textarea {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  

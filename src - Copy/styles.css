@@ -1,0 +1,23 @@
+.body_01 {
+    background-color: #f8f9fa;
+}
+
+.form-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.table-container {
+    margin: 20px auto;
+}
+.invalid {
+    border: 1px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  

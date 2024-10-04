@@ -1,0 +1,123 @@
+================== Loan Appliaction (Single form With Multiple entities)==================
+
+
+install bootstrap cmd : npm install bootstrap
+create a 1 manual folder as pages then create 2 components 
+    1:ng g c loanApplication
+    2: ng g c appliactionList
+
+step 1  Route.ts =  routes we need to create route to navivage and defalut set a page as loanApplication
+        purpose : create a default Route (when we open a link the first page will renderd just because of route)
+        3 Route has been created (1: blank 2: newApplication 3:appliactionList)
+
+
+step 3 : 
+        app.components.html : router-outlet
+
+step 4 :
+        loanApplication.components.html : create your from in this file
+
+step 5 :
+        create a 1 folder as model
+        then create a 1 manual file : Appliaction.model.ts
+        go to api link and see all parameter need to send to api, copy all data
+        go to google and search for convert json to TS copy all the code and paste in Appliaction.model.ts file 
+        
+        purpose : to save  and initile that data in our file so when we write a code it will auto suggest that data 
+                export class Appliaction {
+                    // here need to page you ts code
+                    ex:     
+                        FullName : string;
+                    constructor(){
+                        this.FullName = '';
+                    }
+                }
+                and initile above data in constructor
+
+step 6 :
+        loan-Appliaction.components.ts :
+            import : Formodule
+            we created a 2 class in appliaction.model file 
+            as we create a model data we need to use in our loanApplication just import that data
+
+
+step 7 :
+        go to html file and do data bainding [(ngModel)] = appliaction.FullName
+
+
+step 8 : create button to push data to loan array and display over screen
+        button name : addLoan()
+        in html file write if else condition
+        if (array is empty){
+            display No Loan Added Yet
+        }
+        else{
+            run here for loop 
+            for (item of appliaction.loans; track $index){
+                write here tr td and do data bainding
+                <tr>
+                    <td>{itrem.bankName}</td>
+            }
+        }
+
+
+step 9: on click on Submit need to pass data to api
+    go to app.config.ts file : provideHttPClient // import that function in providers array
+
+step 10 : create a service
+        make a folder name as service
+        then write cmd : ng g s master
+        now you created a service with above cmd
+
+        in master service we store api call
+        we use depenmdency injection
+
+
+step 11 : 
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////
+when user click on submit button page need to loan and vales reset to as its origin
